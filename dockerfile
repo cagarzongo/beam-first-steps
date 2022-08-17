@@ -13,7 +13,7 @@ USER $NB_UID
 RUN python3 -m venv /home/jovyan/beam_venv_dir
 RUN /home/jovyan/beam_venv_dir/bin/pip install --upgrade pip setuptools wheel
 RUN /home/jovyan/beam_venv_dir/bin/pip install jupyterlab
-RUN /home/jovyan/beam_venv_dir/bin/pip install apache-beam["interactive"] apache-beam["gcp"] networkx[default]
+RUN /home/jovyan/beam_venv_dir/bin/pip install apache-beam["interactive"] apache-beam["gcp"]
 RUN /home/jovyan/beam_venv_dir/bin/pip install ipykernel
 RUN /home/jovyan/beam_venv_dir/bin/python -m ipykernel install --user --name beam_venv_kernel --display-name "Python3 (beam_venv)"
 RUN /home/jovyan/beam_venv_dir/bin/pip install ipywidgets
